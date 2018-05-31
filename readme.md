@@ -1,6 +1,6 @@
 
-#### Learning Project from Udemy (Yelpcamp)
+# Learning Project from Udemy (Yelpcamp)
 
-# will try to improve it along the study.
+I will try to improve it along the study.
 
 Kelvin
