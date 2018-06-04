@@ -13,3 +13,11 @@
 .delete-form {
   display: inline;
 }
+
+.campground-img-cropped {
+  width: 250px;
+  height: 180px;
+  object-fit: cover;
+  object-position: center;
+
+}
