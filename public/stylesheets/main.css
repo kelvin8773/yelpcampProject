@@ -21,3 +21,9 @@
   object-position: center;
 
 }
+
+/* Google Map */
+#map {
+  height: 400px;
+  width: 100%;
+}

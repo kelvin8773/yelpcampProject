@@ -7,10 +7,10 @@
       <div class="list-group">
         <li class="list-group-item active">info</li>
         <li class="list-group-item">Contact</li>
-        <li class="list-group-item">map</li>
       </div>
-
+      <div id="map"></div>
     </div>
+
     <div class="col-md-9">
       <div class="img-thumbnail">
           <img class="img-fluid" src="<%= campground.image %>" alt="">
@@ -157,7 +157,37 @@
 
     </div>
   </div>
-
 </div>
+
+<script>
+  function initMap() {
+    var lat = <%= campground.lat %>;
+    var lng = <%= campground.lng %>;
+    var center = {lat: lat, lng: lng };
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 8,
+        center: center,
+        scrollwheel: false
+    });
+    var contentString = `
+      <strong><%= campground.name %><br />
+      <%= campground.location %></strong>
+      <p><%= campground.description %></p>
+    `
+    var infowindow = new google.maps.InfoWindow({
+      content: contentString
+    });
+    var marker = new google.maps.Marker({
+        position: center,
+        map: map
+    });
+    marker.addListener('click', function() {
+      infowindow.open(map, marker);
+    });
+  }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMhIpGmazRrnJ25aZVR7DtG4R52AOJFRQ&callback=initMap"></script>
+
+
 
 <% include ../partials/footer %>

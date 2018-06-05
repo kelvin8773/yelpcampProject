@@ -17,7 +17,8 @@
             <div class="col-md-3 col-sm-6">
               <figure class="figure">
                   <a href="/campgrounds/<%= campground._id %>">
-                    <img src="<%= campground.image %>" class="figure-img img-fluid rounded campground-img-cropped" alt="Campgrouds">
+                    <img class="img__img img-fluid rounded campground-img-cropped"
+                    src="<%= campground.image %>" alt="<%= campground.name %>" title="<%= campground.name %>">
                   </a>
                   <figcaption class="figure-caption text-capitalize font-italic"><%= campground.name %></figcaption>
               </figure>
@@ -25,7 +26,6 @@
             </div>
         <% }); %>
     </div>
-
 </div>
 
 <% include ../partials/footer %>
