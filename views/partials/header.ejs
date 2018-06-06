@@ -5,35 +5,44 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
         <link rel="stylesheet" href="/stylesheets/main.css">
-
     </head>
 
     <body>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <div class="container">
-            <div class="navbar-header">            
-              <a class="navbar-brand" href="/"><i class="fab fa-yelp"></i> YelpCamp</a>
-            </div>
-              <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav mr-auto">
-                  <li class="nav-item active"><a class="nav-link" href="/campgrounds"><i class="fas fa-home"></i> Home </a></li>
-                </ul>
-
-                <ul class="nav navbar-nav ml-auto">
-                  <% if (!currentUser) { %>
-                      <li><a class="nav-link" href="/login">Login</a></li>
-                      <li><a class="nav-link" href="/register">SignUp</a></li>
-                  <% } else { %>
-                      <li class="nav-link">Signed In As <%= currentUser.username %></li>
-                      <li><a class="nav-link" href="/logout">Logout</a></li>
-                  <% } %>
-                </ul>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+              <div class="navbar-header">
+                <a class="navbar-brand" href="/"><i class="fab fa-yelp"></i> YelpCamp</a>
               </div>
-          </div>
-      </nav>
+                <div class="collapse navbar-collapse">
+                  <ul class="nav navbar-nav mr-auto">
+                    <li class="nav-item active"><a class="nav-link" href="/campgrounds"><i class="fas fa-home"></i> Home </a></li>
+                  </ul>
 
+                  <ul class="nav navbar-nav ml-auto">
+                    <% if (!currentUser) { %>
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle text-capitalize" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">New Camper</a>
+                          <div class="dropdown-menu">
+                              <a class="dropdown-item" href="/login">Login</a>
+                              <a class="dropdown-item" href="/register">Register</a>
+                          </div>
+                      </li>
+                    <% } else { %>
+                        <a class="btn btn-light btn-md" href="/campgrounds/new"><i class="fas fa-plus"></i> New Campgrouds</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-capitalize" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%= currentUser.username %></a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">profile</a>
+                                <a class="dropdown-item" href="/logout">Logout</a>
+                            </div>
+                        </li>
+                    <% } %>
+                  </ul>
+                </div>
 
-      <div class="container">
+            </div>
+        </nav>
+
         <% if( error && error.length >0 ){ %>
           <div class="alert alert-danger" role="alert">
             <%= error %>
@@ -44,6 +53,3 @@
             <%= success %>
           </div>
         <% } %>
-      </div>
-
-      <div class="container">

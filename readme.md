@@ -1,7 +1,8 @@
 
 # YelpCamp Learning Project
 
-> Learn Nodejs/Express/MongoDB Full Stack Web Development from Udemy
+> This project mainly for self learning and continue improvement purpose.
+> Learn Nodejs/Express/MongoDB Full Stack Web Development from Udemy.
 
 ## Current successful build-in function ..
 - **Campground publish (CURD)**
@@ -23,6 +24,3 @@
 
 - [Udemy Course - The Web Developer Bootcamp (by Colt Steele)](https://www.udemy.com/the-web-developer-bootcamp/learn/v4/overview)
 - [List of further improvement](https://www.udemy.com/the-web-developer-bootcamp/learn/v4/t/lecture/6754188?start=0)
-
-
-### Kelvin
