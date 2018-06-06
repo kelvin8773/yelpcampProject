@@ -2,7 +2,7 @@
 # YelpCamp Learning Project
 
 > This project mainly for self learning and continue improvement purpose.
-> Learn Nodejs/Express/MongoDB Full Stack Web Development from Udemy.
+Learn Nodejs/Express/MongoDB Full Stack Web Development from Udemy.
 
 ## Current successful build-in function ..
 - **Campground publish (CURD)**

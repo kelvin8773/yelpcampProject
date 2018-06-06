@@ -1,61 +1,26 @@
 <% include ../partials/header %>
 
 <!-- header park begin  -->
-    <!-- <header class="jumbotron">
-        <div class="container">
-            <h1><i class="fab fa-gripfire"></i> Welcome to Yelpcamp!</h1>
-            <p>
-              <h5>View our hand-picked campgrounds from all over the world!</h5>
-            </p>
 
-            <p>
-              <form class="" action="/campgrounds" method="GET">
-                <div class="row">
-                  <div class="input-group col">
-                    <input class="form-control py-2 border-right-0 border" type="search" name="search" placeholder="Search Your Campground Here ..." id="search-input">
-                      <span class="input-group-append">
-                          <button class="btn btn-outline-secondary border-left-0 border" type="submit">
-                              <i class="fa fa-search"></i>
-                          </butt>
-                      </span>
-                  </div>
-                </div>
-              </form>
-            </p>
-
-            <p>
-              <em>Trending Searchs: Park, lake ....</em>
-            </p>
-
-        </div>
-
-    </header> -->
-<header style="width:100%">
-
+  <header style="width:100%">
       <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
         <!-- slide images here  -->
-
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img class="d-block w-100 campground-slideshow" src="/assets/images/K3mPv14.jpg" alt="Classic Campground">
           </div>
-
           <div class="carousel-item">
             <img class="d-block w-100 campground-slideshow" src="/assets/images/SBEmFpv.jpg" alt="Classic Campground">
           </div>
-
           <div class="carousel-item">
             <img class="d-block w-100 campground-slideshow" src="/assets/images/emvhOnb.jpg" alt="Classic Campground">
           </div>
-
           <div class="carousel-item">
             <img class="d-block w-100 campground-slideshow" src="/assets/images/2LSMCmJ.jpg" alt="Classic Campground">
           </div>
-
           <div class="carousel-item">
             <img class="d-block w-100 campground-slideshow" src="/assets/images/TVGe0Ef.jpg" alt="Calssic Campground">
           </div>
-
         </div>
 
         <!-- Cover Text & Search bar  -->
@@ -80,13 +45,13 @@
               </form>
             </p>
             <p>
-              <em>Trending Searchs: Park, lake ....</em>
+              <em><i class="fas fa-fire" style="color: orange"></i> Trending Searchs: Park, lake ....</em>
             </p>
         </div>
       </div>
-</header>
+    </header>
 
-<hr>
+    <hr>
 
 <!-- header park end!-->
 <div class="container">
@@ -97,8 +62,9 @@
                 <a href="/campgrounds/<%= campground._id %>">
                   <img class="img__img img-fluid rounded campground-item"
                   src="<%= campground.image %>" alt="<%= campground.name %>" title="<%= campground.name %>">
+
+                  <figcaption class="figure-caption text-capitalize font-italic"><i class="fab fa-gripfire"></i> <%= campground.name %></figcaption>
                 </a>
-                <figcaption class="figure-caption text-capitalize font-italic"><%= campground.name %></figcaption>
             </figure>
 
           </div>
