@@ -3,7 +3,7 @@
 
 > Learn Nodejs/Express/MongoDB Full Stack Web Development from Udemy
 
-## Current build function ..
+## Current successful build-in function ..
 - **Campground publish (CURD)**
 - **User Comment publish (CURD)**
 - **User model (SignUp/SignIn)**
@@ -14,16 +14,15 @@
 - **google map**
 - **pagination**
 
-## To add function ..
-+ user profile / password reset;
-+ Search function;
-+ Image upload;
+## To Add function ..
+- user profile / password reset
+- Search function
+- Image upload
 
-## useful Links
+## Useful Links
 
 - [Udemy Course - The Web Developer Bootcamp (by Colt Steele)](https://www.udemy.com/the-web-developer-bootcamp/learn/v4/overview)
 - [List of further improvement](https://www.udemy.com/the-web-developer-bootcamp/learn/v4/t/lecture/6754188?start=0)
 
 
-Kelvin
-May 30, 2018
+### Kelvin
