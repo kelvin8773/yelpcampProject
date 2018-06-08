@@ -22,14 +22,14 @@
 
 }
 
-.campground-slideshow {
+.campground-header-slideshow {
   width: auto;
   height: 365px;
   opacity: 0.75;
-
   object-fit: cover;
   object-position: center;
 }
+
 
 .navbar_fix {
   border-radius: 5px;

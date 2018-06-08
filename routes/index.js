@@ -1,10 +1,7 @@
 const express = require('express');
 const router = express.Router();
-
 const passport = require('passport');
 const User = require("../models/user");
-
-
 
 
 router.get("/", function(req, res){
@@ -12,9 +9,6 @@ router.get("/", function(req, res){
 });
 
 
-// ===================
-// Auth Routes
-// ===================
 
 // show register form
 router.get("/register", function(req,res){
@@ -33,7 +27,7 @@ router.post("/register", function(req, res){
       req.flash("error", err.message);
       return res.render("register"); }
       passport.authenticate("local")(req, res, function(){
-        req.flash("success", "Welcome to Yelpcamp, " + user.username);
+        req.flash("success", "Succcessful Signed Up! Welcome to Yelpcamp, " + req.body.username);
         res.redirect("/campgrounds");
       });
   });
@@ -60,6 +54,7 @@ router.get("/logout", function(req, res){
   req.flash("success","Logged you out!");
   res.redirect("/campgrounds");
 });
+
 
 
 module.exports = router;

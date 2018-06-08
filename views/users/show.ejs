@@ -1,0 +1,82 @@
+<% include ../partials/header %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <hr>
+      <!-- Show Avatar & Email  -->
+      <% if (!user.avatar && !user.email) { %>
+        <div class="img-thumbnail img-fluid rounded">
+          <img src="https://cdn0.iconfinder.com/data/icons/avatars-6/500/Avatar_boy_man_people_account_client_male_person_user_work_sport_beard_team_glasses-512.png" alt="avatar">
+          <div class="img-caption text-center font-weight-light font-italic">
+            <!-- Show User Name  -->
+            <% if(!user.firstName || !user.lastName) { %>
+              <h3 class="text-capitalize "><%= user.username %></h3>
+            <% } else { %>
+              <h3 class="text-capitalize "><%= user.firstName + ' '+ user.lastName %></h3>
+            <% }; %>
+            <p>
+              User Don't have an Email Yet.
+            </p>
+          </div>
+        </div>
+      <% } else { %>
+        <div class="img-thumbnail img-fluid">
+          <img src="<%= user.avatar %>" alt="avatar">
+          <div class="img-caption text-center font-weight-light font-italic">
+            <!-- Show User Name  -->
+            <% if(!user.firstName || !user.lastName) { %>
+              <h3 class="text-capitalize "><%= user.username %></h3>
+            <% } else { %>
+              <h3 class="text-capitalize "><%= user.firstName + ' '+ user.lastName %></h3>
+            <% }; %>
+            <p>
+              Email: <a href="mailto: <%= user.email %>"><%= user.email %></a>
+            </p>
+          </div>
+        </div>
+      <% }; %>
+
+      <hr>
+      <% if(!user.intro) { %>
+        <h5 class="text-capitalize text-center">No Intro yet.</h5>
+      <% } else { %>
+        <h6 class="font-weight-light font-italic "><%= user.intro %></h6>
+      <% }; %>
+
+      <hr>
+      <div class="justify-content-center">
+        <% if(currentUser && user._id.equals(currentUser._id)) { %>
+            <a class="btn btn-sm btn-warning" href="/users/<%= user._id %>/edit">Edit</a>
+        <% }; %>
+      </div>
+
+    </div>
+
+    <div class="col-md-9">
+      <h3 class="text-capitalize text-center font-weight-normal font-italic"><%= user.username %>'s Campgrounds</h3>
+      <hr>
+      <div class="container">
+        <div class="row text-center ">
+          <% campgrounds.forEach(function(campground){ %>
+                <div class="col-md-4 col-sm-6">
+                  <figure class="figure">
+                      <a href="/campgrounds/<%= campground._id %>">
+                        <img class="img__img img-fluid rounded campground-item"
+                        src="<%= campground.image %>" alt="<%= campground.name %>" title="<%= campground.name %>">
+
+                        <figcaption class="figure-caption text-capitalize font-italic"><i class="fab fa-gripfire"></i> <%= campground.name %></figcaption>
+                      </a>
+                  </figure>
+
+                </div>
+            <% }); %>
+        </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+<% include ../partials/footer %>

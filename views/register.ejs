@@ -5,21 +5,45 @@
     <h1 style="text-align: center">Sign Up</h1>
     <div style="width: 30%; margin: 25px auto;">
         <form action="/register" method="post">
-            <div class="form-group">
-                <input class="form-control" type="text" name="username" placeholder="username">
-            </div>
+          <div class="form-group">
+              <label for="firstName">First Name *</label>
+              <input class="form-control" type="text" name="firstName" placeholder="First Name (John)">
+          </div>
+          <div class="form-group">
+              <label for="lastName">Last Name *</label>
+              <input class="form-control" type="text" name="lastName" placeholder="Last Name (Doe)">
+          </div>
 
-            <div class="form-group">
-                <input class="form-control" type="password" name="password" placeholder="password">
-            </div>
+          <div class="form-group">
+              <label for="username">User Name(For Login) *</label>
+              <input class="form-control" type="text" name="username" placeholder="username">
+          </div>
 
-            <div class="form-group">
-                <input class="form-control" type="text" name="adminCode" placeholder="Admin Code">
-            </div>
+          <div class="form-group">
+              <label for="password">Password *</label>
+              <input class="form-control" type="password" name="password" placeholder="password">
+          </div>
 
-            <div class="form-group">
-                <button class="btn btn-lg btn-primary btn-block">Sign Up!</button>
-            </div>
+          <div class="form-group">
+              <label for="avatar">User Image URL *</label>
+              <input class="form-control" type="text" name="avatar" placeholder="User Image(avatar) URL">
+          </div>
+
+          <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input class="form-control" type="email" name="email" placeholder="email address">
+          </div>
+
+
+          <div class="form-group">
+              <label for="adminCode">AdminCode (Optional)</label>
+              <input class="form-control" type="text" name="adminCode" placeholder="Admin Code">
+          </div>
+
+          <div class="form-group">
+              <button class="btn btn-lg btn-primary btn-block">Sign Up!</button>
+          </div>
+
         </form>
         <a href="/campgrounds">Go Back</a>
     </div>

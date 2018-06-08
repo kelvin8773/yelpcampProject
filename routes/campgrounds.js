@@ -8,7 +8,7 @@ const middleware = require("../middleware");
 var options = {
   provider: "google",
   httpAdapter: "https",
-  apiKey: process.env.GEOCODE_API_KEY,
+  apiKey: process.env.GOOGLE_GEOCODE_API_KEY,
   formatter: null
 };
 
@@ -128,7 +128,6 @@ router.put("/:id", middleware.checkCampgroundOwnership, function(req, res){
         req.flash("error", "Invalid address");
         res.redirect("/campgrounds");
       }
-
       req.body.campground.lat = data[0].latitude;
       req.body.campground.lng = data[0].longitude;
       req.body.campground.location = data[0].formattedAddress;

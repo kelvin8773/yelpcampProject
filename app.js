@@ -16,6 +16,7 @@ const seedDB      = require("./seeds");
 
 const commentRoutes     = require("./routes/comments");
 const campgroundRoutes  = require("./routes/campgrounds");
+const userRoutes        = require("./routes/users");
 const indexRoutes       = require("./routes/index");
 
 
@@ -50,6 +51,7 @@ app.use(function(req, res, next){
 app.locals.moment = require('moment');
 
 app.use("/", indexRoutes);
+app.use("/users", userRoutes);
 app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
 

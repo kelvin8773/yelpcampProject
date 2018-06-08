@@ -1,25 +1,25 @@
 <% include ../partials/header %>
 
-<!-- header park begin  -->
+<!-- header part begin  -->
 
   <header style="width:100%">
       <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
         <!-- slide images here  -->
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="d-block w-100 campground-slideshow" src="/assets/images/K3mPv14.jpg" alt="Classic Campground">
+            <img class="d-block w-100 campground-header-slideshow" src="/assets/images/K3mPv14.jpg" alt="Classic Campground">
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100 campground-slideshow" src="/assets/images/SBEmFpv.jpg" alt="Classic Campground">
+            <img class="d-block w-100 campground-header-slideshow" src="/assets/images/SBEmFpv.jpg" alt="Classic Campground">
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100 campground-slideshow" src="/assets/images/emvhOnb.jpg" alt="Classic Campground">
+            <img class="d-block w-100 campground-header-slideshow" src="/assets/images/emvhOnb.jpg" alt="Classic Campground">
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100 campground-slideshow" src="/assets/images/2LSMCmJ.jpg" alt="Classic Campground">
+            <img class="d-block w-100 campground-header-slideshow" src="/assets/images/2LSMCmJ.jpg" alt="Classic Campground">
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100 campground-slideshow" src="/assets/images/TVGe0Ef.jpg" alt="Calssic Campground">
+            <img class="d-block w-100 campground-header-slideshow" src="/assets/images/TVGe0Ef.jpg" alt="Calssic Campground">
           </div>
         </div>
 
@@ -32,8 +32,8 @@
 
             <p>
               <form class="" action="/campgrounds" method="GET">
-                <div class="row">
-                  <div class="input-group col">
+                <div class="row justify-content-md-center">
+                  <div class="input-group col-md-9">
                     <input class="form-control py-2 border-right-0 border" type="search" name="search" placeholder="Search Your Campground Here ..." id="search-input">
                       <span class="input-group-append">
                           <button class="btn btn-outline-secondary border-left-0 border" type="submit">
@@ -53,7 +53,8 @@
 
     <hr>
 
-<!-- header park end!-->
+<!-- header part end!-->
+
 <div class="container">
   <div class="row text-center ">
     <% campgrounds.forEach(function(campground){ %>

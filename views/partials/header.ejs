@@ -32,7 +32,8 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-capitalize" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%= currentUser.username %></a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">profile</a>
+                                <a class="dropdown-item" href="/users/<%= currentUser.id %>">Public Profile</a>
+                                <a class="dropdown-item" href="/users/<%= currentUser.id %>/edit">Edit My info</a>
                                 <a class="dropdown-item" href="/logout">Logout</a>
                             </div>
                         </li>
