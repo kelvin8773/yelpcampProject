@@ -16,10 +16,15 @@ Learn Nodejs/Express/MongoDB Full Stack Web Development from Udemy.
 - **google map**
 - **pagination**
 - **Search Campgrounds**
+- **User Profile**
+
 
 ## To Add function ..
-- user profile / password reset
+- Admin Page
+- password reset
 - Image upload
+
+
 
 ## Useful Links
 
