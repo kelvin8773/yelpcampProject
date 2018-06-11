@@ -17,12 +17,13 @@ Learn Nodejs/Express/MongoDB Full Stack Web Development from Udemy.
 - **pagination**
 - **Search Campgrounds**
 - **User Profile**
+- **Add Both Image upload & Image Url option**
 
 
 ## To Add function ..
 - Admin Page
 - password reset
-- Image upload
+
 
 
 
