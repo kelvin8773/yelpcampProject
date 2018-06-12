@@ -6,11 +6,13 @@ const Campground = require('../models/campground');
 const middleware = require("../middleware");
 
 var multer = require('multer');
+
 var storage = multer.diskStorage({
   filename: function(req, file, callback) {
     callback(null, Date.now() + file.originalname);
   }
 });
+
 var imageFilter = function (req, file, cb) {
     // accept image files only
     if (!file.originalname.match(/\.(jpg|jpeg|png|gif)$/i)) {
@@ -18,6 +20,7 @@ var imageFilter = function (req, file, cb) {
     }
     cb(null, true);
 };
+
 var upload = multer({ storage: storage, fileFilter: imageFilter})
 
 var cloudinary = require('cloudinary');
@@ -107,7 +110,7 @@ router.post("/", middleware.isLoggedIn, upload.single('image'), function(req, re
 
 
   if (req.body.campground.image_url === "" || req.body.campground.image_url === null) {
-    cloudinary.uploader.upload(req.file.path, function(result) {      
+    cloudinary.uploader.upload(req.file.path, function(result) {
         // add cloudinary url for the image to the campground object under image property
         req.body.campground.image = result.secure_url;
 

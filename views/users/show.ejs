@@ -45,10 +45,22 @@
       <% }; %>
 
       <hr>
-      <div class="justify-content-center">
+
+      <div class="form-inline">
         <% if(currentUser && user._id.equals(currentUser._id)) { %>
+          <div class="form-control">
             <a class="btn btn-sm btn-warning" href="/users/<%= user._id %>/edit">Edit</a>
+          </div>
         <% }; %>
+
+        <% if(currentUser.isAdmin && user._id.equals(currentUser._id)) { %>
+          <div class="form-control form">
+            <button class="btn btn-sm btn-success" type="button" name="button">
+              <i class="fas fa-wrench"></i> admin
+            </button>
+          </div>
+        <% }; %>
+
       </div>
 
     </div>

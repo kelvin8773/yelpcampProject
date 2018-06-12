@@ -17,21 +17,35 @@ router.get("/register", function(req,res){
 
 // handle sign up logic
 router.post("/register", function(req, res){
-  var newUser = new User({username: req.body.username});
-  // eval(require("locus"));
+
+  var newUser = new User({
+      username:   req.body.username,
+      firstName:  req.body.firstName,
+      lastName:   req.body.lastName,
+      avatar:     req.body.avatar,
+      email:      req.body.email
+        });
+
   if(req.body.adminCode === "secretcode123") {
     newUser.isAdmin = true;
-  }
+  };
+
   User.register(newUser, req.body.password, function(err, user){
     if(err){
+      console.log(err);
       req.flash("error", err.message);
-      return res.render("register"); }
+      res.redirect("/register");
+    };
+
       passport.authenticate("local")(req, res, function(){
-        req.flash("success", "Succcessful Signed Up! Welcome to Yelpcamp, " + req.body.username);
+        req.flash("success", "Succcessful Signed Up! Welcome to Yelpcamp, " + req.body.firstName + " " + req.body.lastName + " !!!");
         res.redirect("/campgrounds");
       });
+
   });
 });
+
+
 
 // show login form
 
