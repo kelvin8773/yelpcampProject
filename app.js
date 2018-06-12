@@ -21,7 +21,7 @@ const indexRoutes       = require("./routes/index");
 
 
 //mongoose.connect("mongodb://localhost/yelp_camp");
-mongoose.connect(process.env.MLAB_PROCUTION_DB_CONNECTION);
+mongoose.connect(process.env.DB_CONNECTION);
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
