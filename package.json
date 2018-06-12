@@ -1,10 +1,11 @@
 {
   "name": "yelpcamp",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.5.0",
+  "description": "yelpcam learning project app",
   "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "scripts": {  
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "author": "Kelvin Liang",
   "license": "ISC",
