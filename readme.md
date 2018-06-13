@@ -1,6 +1,10 @@
 
 # YelpCamp Learning Project
 
+##### Learn Nodejs/Express/MongoDB Full Stack Web Development from Udemy.
+##### [Project Page](https://kelvindevop.github.io/yelpcampProject/)
+---
+
 YelpCamp project is a very popular Web Development Project in Udemy, it is published in 2015 while it still continually getting update until today!
 It has a big community of students and course TA are very responses for your questions and problem.
 The reason I put up this project here are:
@@ -10,11 +14,10 @@ The reason I put up this project here are:
 3. Continually Improve this project to make it more close the real world project.
 4. A showcase for my stack profile.
 
-[Demo Website](https://yelpcamp-learning.herokuapp.com/)
+---
 
-[Project Page](https://kelvindevop.github.io/yelpcampProject/)
-
-#### Learn Nodejs/Express/MongoDB Full Stack Web Development from Udemy.
+[Demo Website (Hosted in Heroku)](https://yelpcamp-learning.herokuapp.com/)
+---
 
 ## Current successful build-in function ..
 - **Campground publish (CURD)**
@@ -38,8 +41,8 @@ The reason I put up this project here are:
 
 
 
-
-## Related Links
+---
+## Reference Link
 
 - [Udemy Course - Web Developer Bootcamp (by Colt Steele)](https://www.udemy.com/the-web-developer-bootcamp/learn/v4/overview)
 - [List of further improvement](https://www.udemy.com/the-web-developer-bootcamp/learn/v4/t/lecture/6754188?start=0)
