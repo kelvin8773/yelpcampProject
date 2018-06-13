@@ -109,7 +109,7 @@ router.post("/", middleware.isLoggedIn, upload.single('image'), function(req, re
     req.body.campground.location = data[0].formattedAddress;
 
 
-  if (req.body.campground.image_url === "" || req.body.campground.image_url === null) {
+ if (req.body.campground.image_url === "" || req.body.campground.image_url === null) {
     cloudinary.uploader.upload(req.file.path, function(result) {
         // add cloudinary url for the image to the campground object under image property
         req.body.campground.image = result.secure_url;
