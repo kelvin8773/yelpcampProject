@@ -1,9 +1,8 @@
 
 # YelpCamp Learning Project
 
-#### Learn Nodejs/Express/MongoDB Full Stack Web Development from Udemy. [Project Page](https://kelvindevop.github.io/yelpcampProject/)
+##### Learn Nodejs/Express/MongoDB Full Stack Web Development from Udemy. [Project Page](https://kelvindevop.github.io/yelpcampProject/)
 
-[Demo Website (Hosted in Heroku)](https://yelpcamp-learning.herokuapp.com/)
 ---
 
 YelpCamp project is a very popular Web Development Project in Udemy, it is published in 2015 while it still continually getting update until today!
@@ -16,9 +15,7 @@ The reason I put up this project here are:
 3. Continually Improve this project to make it more close the real world project.
 
 
----
-
-## Current build-in functions ..
+### Current build-in functions:
 - **Campground publish (CURD)**
 - **User Comment publish (CURD)**
 - **User model (SignUp/SignIn)**
@@ -33,13 +30,14 @@ The reason I put up this project here are:
 - **Add Both Image upload & Image Url option**
 
 
-## To Add function ..
+### To Add function ..
 - Admin Page (Manage Users, Campgrounds, comments)
-- Password reset 
-- Image Edit (upload in avatar or other area if possible).
--
+- Password reset
+- Image Edit (upload in avatar or other area if possible)
 
-## Reference Link
 
+### Reference Link
+
+- [Demo Website (Hosted in Heroku)](https://yelpcamp-learning.herokuapp.com/)
 - [Udemy Course - Web Developer Bootcamp (by Colt Steele)](https://www.udemy.com/the-web-developer-bootcamp/learn/v4/overview)
 - [List of further improvement](https://www.udemy.com/the-web-developer-bootcamp/learn/v4/t/lecture/6754188?start=0)
