@@ -26,23 +26,28 @@ The reason I put up this project here are:
 
 
 ### Current build-in functions:
-- **Campground publish (CURD)**
-- **User Comment publish (CURD)**
-- **User model (SignUp/SignIn)**
-- **Show Time since posted (campgrounds/comments)**
-- **Style with Bootstrap 4**
-- **Landing Page with slideshow background**
-- **Admin function**
-- **Google map**
-- **pagination**
-- **Search Campgrounds**
-- **User Profile(show/Edit Page)**
-- **Add Both Image upload & Image Url option**
+- Campground publish (CURD)
+- User Comment publish (CURD)
+- User model (SignUp/SignIn)
+- Show Time since posted (campgrounds/comments)
+- Style with Bootstrap 4
+- Landing Page with slideshow background
+- Admin function
+- Google map
+- pagination
+- Search Campgrounds
+- User Profile(show/Edit Page)
+- Add Both Image upload & Image Url option
+
+June 13, 2018
+- Add Admin Page(Mange Users, Campground)
+- Hide AdminCode
+- Fixed Mobile View Issue
 
 
 ### To Add function
-- Mobile adaptable View
-- Admin Page (Manage Users, Campgrounds, comments)
+- To be discuss
+
 
 ### Consider to Add
 - Password reset

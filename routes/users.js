@@ -6,17 +6,37 @@ const User = require("../models/user");
 const Campground = require("../models/campground");
 const middleware = require("../middleware");
 
+// Admin Page
+router.get("/:id/admin", middleware.checkAdminOwnership, function(req, res){
+  Campground.find(function(err, allCampgrounds) {
+    if (err) {
+        req.flash("error", err.message);
+        res.redirect("back");
+    } else {
+      User.find(function(err, allUsers){
+        if (err) {
+            req.flash("error", err.message);
+            res.redirect("back");
+          } else {
+          return res.render("users/admin", {campgrounds: allCampgrounds, users: allUsers});
+        }
+      });
+    }
+    
+  });
+});
+
 
 // User public profile (Show Page)
 router.get("/:id", function(req, res){
   User.findById(req.params.id, function(err, foundUser){
     if (err) {
-      req.flash("error", "Something went wrong.");
+      req.flash("error", "Can't fine the User!");
       return res.redirect("back");
     }
     Campground.find().where("author.id").equals(foundUser._id).exec(function(err, campgrounds) {
       if (err) {
-        req.flash("error", "Something went Wrong!");
+        req.flash("error", "Something is wrong, please check with our support!");
         return res.redirect("back");
       }
       res.render("users/show", {user: foundUser, campgrounds: campgrounds});
@@ -52,7 +72,7 @@ router.put("/:id", middleware.checkUserOwnership, function(req, res){
           res.redirect("back");
         } else {
           req.flash("success", "Successfully Updated!");
-          res.redirect("/users/" + updatedUser._id);
+          return res.redirect("/users/" + updatedUser._id);
         }
     });
 });

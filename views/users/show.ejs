@@ -53,11 +53,11 @@
           </div>
         <% }; %>
 
-        <% if(currentUser.isAdmin && user._id.equals(currentUser._id)) { %>
+        <% if(user.isAdmin && user._id.equals(currentUser._id)) { %>
           <div class="form-control form">
-            <button class="btn btn-sm btn-success" type="button" name="button">
+            <a class="btn btn-sm btn-success" href="/users/<%= user._id %>/admin">
               <i class="fas fa-wrench"></i> admin
-            </button>
+            </a>
           </div>
         <% }; %>
 
@@ -74,7 +74,7 @@
                 <div class="col-md-4 col-sm-6">
                   <figure class="figure">
                       <a href="/campgrounds/<%= campground._id %>">
-                        <img class="img__img img-fluid rounded campground-item"
+                        <img class="img__img img-fluid rounded campground-list-item"
                         src="<%= campground.image %>" alt="<%= campground.name %>" title="<%= campground.name %>">
 
                         <figcaption class="figure-caption text-capitalize font-italic"><i class="fab fa-gripfire"></i> <%= campground.name %></figcaption>

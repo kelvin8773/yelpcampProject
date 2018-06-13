@@ -56,7 +56,30 @@ middlewareObj.checkUserOwnership = function(req, res, next){
             req.flash("error", err.message);
             res.redirect("back");
           }else {
-            if(foundUser._id.equals(req.user._id)){
+            if(foundUser._id.equals(req.user._id) || req.user.isAdmin ){
+              next();
+            } else {
+              req.flash("error", "You don't have permission to do that!");
+              res.redirect("/users/" + foundUser._id);
+              }
+            }
+          });
+        }
+    else {
+      req.flash("error", "You need to be logged in to do this!");
+      res.redirect("/campgrounds");
+    }
+}
+
+
+middlewareObj.checkAdminOwnership = function(req, res, next){
+    if(req.isAuthenticated()){
+        User.findById(req.params.id, function(err, foundUser){
+          if(err || !foundUser){
+            req.flash("error", "What Happen?");
+            res.redirect("back");
+          }else {
+            if(foundUser.isAdmin){
               next();
             } else {
               req.flash("error", "You don't have permission to do that!");
@@ -66,7 +89,7 @@ middlewareObj.checkUserOwnership = function(req, res, next){
           });
         }
     else {
-      req.flash("error", "You need to be logged in to do this!");
+      req.flash("error", "You need to logIn first!");
       res.redirect("/campgrounds");
     }
 }
